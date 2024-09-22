@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="ProjectAkhirLab_PSD.Layouts.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!--Navbar for customer -->
+            <asp:PlaceHolder ID="CustomerNavbar" runat="server" Visible="false">
+                <asp:Button ID="OrderMakeupbutton" runat="server" Text="Order Makeup" OnClick="OrderMakeupbutton_Click" Style="margin-right: 10px" />
+                <asp:Button ID="Historybutton" runat="server" Text="History" OnClick="Historybutton_Click" Style="margin-right: 10px" />
+                <asp:Button ID="Profilebutton" runat="server" Text="Profile" OnClick="Profilebutton_Click" Style="margin-right: 10px" />
+                <asp:Button ID="Logoutbutton" runat="server" Text="Logout" OnClick="Logoutbutton_Click" Style="margin-right: 10px" />
+            </asp:PlaceHolder>
+        </div>
+        <div>
+            <!--Navbar for Admin -->
+            <asp:PlaceHolder ID="AdminNavbar" runat="server" Visible="false">
+                <asp:Button ID="Homebutton" runat="server" Text="Home" OnClick="Homebutton_Click" Style="margin-right: 10px" />
+                <asp:Button ID="Managebtn" runat="server" Text="Manage Makeup" OnClick="Managebtn_Click" Style="margin-right: 10px" />
+                <asp:Button ID="Orderbtn" runat="server" Text="Order Queue" OnClick="Orderbtn_Click" Style="margin-right: 10px" />
+                <asp:Button ID="profilebtn" runat="server" Text="Profile" OnClick="profilebtn_Click" Style="margin-right: 10px" />
+                <asp:Button ID="reportbtn" runat="server" Text="Transaction Report" OnClick="reportbtn_Click" Style="margin-right: 10px" />
+                <asp:Button ID="Historyadmin" runat="server" Text="History" OnClick="Historyadmin_Click" Style="margin-right: 10px"/>
+                <asp:Button ID="Logoutbtn" runat="server" Text="Logout" OnClick="Logoutbtn_Click" />
+            </asp:PlaceHolder>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
